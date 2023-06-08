@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class UIButtonsTower : MonoBehaviour
 {
+    public string scene;
     private tower tower;
     public string tagDatos;
     public string tipoDato;
@@ -152,6 +154,10 @@ public class UIButtonsTower : MonoBehaviour
                 obj.SetActive(true);
             }
         }
+    }
+
+    public void changeScene() {
+        SceneManager.LoadScene(scene);
     }
 }
 
